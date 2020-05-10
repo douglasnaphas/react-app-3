@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Select from "react-select";
 
@@ -7,7 +6,7 @@ function App() {
   const [selectedOption, setSelectedOption] = useState(null);
   const [val, setVal] = useState(0);
   const handleChange = (s) => {
-    console.log(`setting...`, s, setSelectedOption(s));
+    setSelectedOption(s);
     console.log(`I would fire a mutation with option`, s, ", value", val);
   };
   const options = [
