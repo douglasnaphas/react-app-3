@@ -16,4 +16,4 @@ Run with `npm start`. I usually do `PORT=<PORT> npm start`, for example `PORT=30
 
 The app lets you make a selection with a Select, and enter a value in a text field, and runs some function based on the values from both when either changes.
 
-![Demo Select Input State][demo-select-input.gif]
+![Demo Select Input State](demo-select-input.gif)
