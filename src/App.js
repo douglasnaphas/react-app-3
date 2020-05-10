@@ -13,6 +13,17 @@ function App() {
     { value: "strawberry", label: "Strawberry" },
     { value: "vanilla", label: "Vanilla" },
   ];
+  const TextField = ({ label, onBlur, defaultValue, disabled = false }) => (
+    <input
+      name={label}
+      disabled={disabled}
+      type="text"
+      defaultValue={defaultValue}
+      onBlur={(event) => {
+        if (event.target.value !== defaultValue) onBlur(event.target.value);
+      }}
+    />
+  );
   return (
     <div className="App">
       <div>
@@ -21,6 +32,20 @@ function App() {
           onChange={handleChange}
           options={options}
         ></Select>
+      </div>
+      <div>
+        <TextField
+          label="at:"
+          defaultValue={0}
+          onBlur={(v) => {
+            console.log(
+              `I would fire a mutation with option`,
+              selectedOption,
+              ", value",
+              v
+            );
+          }}
+        ></TextField>
       </div>
     </div>
   );
