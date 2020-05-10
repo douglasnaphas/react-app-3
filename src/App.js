@@ -5,8 +5,10 @@ import Select from "react-select";
 
 function App() {
   const [selectedOption, setSelectedOption] = useState(null);
+  const [val, setVal] = useState(0);
   const handleChange = (s) => {
     console.log(`setting...`, s, setSelectedOption(s));
+    console.log(`I would fire a mutation with option`, s, ", value", val);
   };
   const options = [
     { value: "chocolate", label: "Chocolate" },
@@ -36,8 +38,9 @@ function App() {
       <div>
         <TextField
           label="at:"
-          defaultValue={0}
+          defaultValue={val}
           onBlur={(v) => {
+            setVal(v);
             console.log(
               `I would fire a mutation with option`,
               selectedOption,
