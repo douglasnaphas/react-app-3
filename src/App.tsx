@@ -11,11 +11,7 @@ const App = () => (
         <Selecting />
       </Route>
       <Route exact path="/styled">
-        <Styled
-          onClick={() => {
-            alert("clicked");
-          }}
-        ></Styled>
+        <Styled></Styled>
       </Route>
     </Switch>
   </HashRouter>
