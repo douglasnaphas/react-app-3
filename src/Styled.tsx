@@ -1,5 +1,24 @@
 import React from "react";
 
-const Styled = <></>;
+import styled from "styled-components";
+
+const Button = styled.button``;
+
+const Styled = (props) => (
+  <>
+    <div>
+      <Button {...props}>f</Button>
+    </div>
+    <div>
+      <button
+        onClick={() => {
+          alert("g clicked");
+        }}
+      >
+        g
+      </button>
+    </div>
+  </>
+);
 
 export default Styled;
