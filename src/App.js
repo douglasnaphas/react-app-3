@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Select from "react-select";
 
-function App() {
+const Selecting = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [val, setVal] = useState(0);
   const handleChange = (s) => {
@@ -51,6 +52,16 @@ function App() {
       </div>
     </div>
   );
-}
+};
+
+const App = () => (
+  <HashRouter>
+    <Switch>
+      <Route exact path="/selecting">
+        <Selecting />
+      </Route>
+    </Switch>
+  </HashRouter>
+);
 
 export default App;
